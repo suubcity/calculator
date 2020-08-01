@@ -1,0 +1,152 @@
+/* ccs reset */
+/* #region	 */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: calculator;
+  src: url("https://res.cloudinary.com/dli7mlkdu/raw/upload/v1596211964/Fonts/digital-7_fc4v2a.ttf")
+    format("truetype");
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+/*#endregion*/
+
+body {
+}
+
+#main-container {
+  background-color: black;
+  background-image: url(https://res.cloudinary.com/dli7mlkdu/image/upload/v1596235985/Calculator/68-Back-To-The-Future-HD-Wallpapers-Background-Images-_osoktq.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 2em;
+  height: 100vh;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  font-family: calculator, sans-serif;
+}
+
+#calculator-container {
+  opacity: 95%;
+  border-radius: 0.1em;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  background-color: gray;
+  background-image: url(https://res.cloudinary.com/dli7mlkdu/image/upload/v1596220125/Pictures/untitled_asq0eo.jpg);
+  background-size: cover;
+}
+
+#display {
+  opacity: 90%;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 0.1em;
+  background-color: black;
+  padding: 0.7em;
+  color: #e46655;
+  text-shadow: 1px 1px 3px #fb4307;
+  margin-bottom: 0.5em;
+  border: 0.03em solid grey;
+}
+
+#buttons-container {
+  width: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0.2em;
+}
+
+.button {
+  transition: text-shadow 0.1s;
+  transition-timing-function: ease-out;
+}
+
+#button-0,
+#button-plus,
+#button-minus,
+#button-multiply,
+#button-divide,
+#button-equals {
+  width: auto;
+  grid-column-start: span 2;
+}
+
+.green-button {
+  opacity: 90%;
+  border-radius: 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 1.5em;
+  background-color: black;
+  color: #a9f890;
+  text-shadow: 1px 1px 4px #97e606;
+  border: 0.03em solid grey;
+}
+
+.red-button {
+  opacity: 90%;
+  border-radius: 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 1.5em;
+  background-color: black;
+  color: #e46655;
+  text-shadow: 1px 1px 3px #fb4307;
+  border: 0.03em solid grey;
+}
+
+.yellow-button {
+  opacity: 90%;
+  border-radius: 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 1.5em;
+  background-color: black;
+  color: #fbf37b;
+  text-shadow: 1px 1px 4px #e69f06;
+  border: 0.03em solid grey;
+}
+
+.green-button:hover {
+  text-shadow: 0 0 3px rgb(0, 243, 81), 0 0 8px rgb(0, 243, 81);
+}
+
+.red-button:hover {
+  text-shadow: 1px 1px 4px rgb(231, 119, 119), -1px -1px 8px rgb(255, 95, 95);
+}
+
+.yellow-button:hover {
+  text-shadow: 0 0 3px rgb(243, 219, 0), 0 0 8px rgb(236, 224, 111);
+}
